@@ -38,20 +38,21 @@ module.exports.main = function() {
 }
 
 module.exports.main_basic = function() {
-    var str = 'Javascript Map Test';
-    console.log(str);
+    var head = 'Javascript fwrite Test';
+    console.log(head);
 
-    const side = [2, 5, 9];
-    const areaFor = [];
-    let areaMap = [];
+    var fh = fopen("c:\\_dev\\_js\\fwrite\\MyFile.txt", 3); // Open the file for writing
 
-    for(let i=0; i< side.length; i++) {
-        areaFor.push(side[i]*side[i]);
+    if(fh!=-1) // If the file has been successfully opened
+    
+    {
+    
+    var str = "Some text goes here...";
+    
+    fwrite(fh, str); // Write the string to a file
+    
+    fclose(fh); // Close the file
+
+    console.log(`side : ${str}`);
     }
-
-    side.map((item) => item * item);
-
-    console.log(`side : ${side}`);
-    console.log(`area by forloop : ${areaFor}`);
-    console.log(`area by map : ${areaMap}`);
 }

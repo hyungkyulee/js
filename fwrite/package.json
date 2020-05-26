@@ -1,0 +1,7 @@
+{
+    "scripts": {
+        "test-linux": "node -e 'require(\"./sampleCode\").main()'",
+        "test-window": "node -e \"require('./sampleCode').someFunction()\"",
+        "test": "node -e \"require('./sampleCode').main()\""
+    }
+}
