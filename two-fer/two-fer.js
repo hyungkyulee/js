@@ -3,6 +3,11 @@
 // convenience to get you started writing code faster.
 //
 
-export const twoFer = (name) => {
-  return (name) ? `One for ${name}, one for me.` : `One for you, one for me.`
+/*
+  give the variable a default value instead of having a conditional. 
+  The default value will act as name's value if it doesn't receive another value. 
+  To do this, you can type name = 'you' in the parameter of the function.
+*/
+export const twoFer = (name = 'you') => {
+  return `One for ${name}, one for me.`
 };
